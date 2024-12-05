@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стили изобразительного искусства</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo2.png" alt="Логотип сайта" id="logo">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="mobile-menu">
+            <label for="menu-toggle" class="close-icon">&times;</label>
+            <ul>
+                <li><a href="shop.html">Купить курсы</a></li>
+                <li><a href="exhibitions.html">Посетить выставки</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="cards.html">Направления</a></li>
+                <li><a href="map.html">Галереи и музеи</a></li>
+            </ul>
+        </nav>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="shop.html">Курсы</a></li>
+                <li><a href="exhibitions.html">Выставки</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="cards.html">Направления</a></li>
+                <li><a href="map.html">Галереи и музеи</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="terms">
+            <div class="content-container">
+                <h2>Основные направления изобразительного искусства</h2>
+                <!-- Карточки с изображениями и текстами -->
+                <div class="card">
+                    <input type="checkbox" id="card1" class="card-toggle">
+                    <label for="card1" class="card-inner">
+                        <img src="img1.png" alt="Экспрессионизм" class="card-img">
+                        <div class="card-text">
+                            <p>Экспрессионизм. Выражает эмоциональное состояние автора, восприятие действительности через призму эмоций: разочарование, тревога, страх.</p>
+                        </div>
+                    </label>
+                </div>
+        
+                <div class="card">
+                    <input type="checkbox" id="card2" class="card-toggle">
+                    <label for="card2" class="card-inner">
+                        <img src="img2.png" alt="Реализм" class="card-img">
+                        <div class="card-text">
+                            <p>Реализм. Главная задача — изобразить ситуации и предметы через призму определённых правил и канонов.</p>
+                        </div>
+                    </label>
+                </div>
+        
+                <div class="card">
+                    <input type="checkbox" id="card3" class="card-toggle">
+                    <label for="card3" class="card-inner">
+                        <img src="img3.png" alt="Неоклассицизм" class="card-img">
+                        <div class="card-text">
+                            <p>Неоклассицизм. Направление соединяет элементы классики и античности, предполагает идеализированное изображение предметов.</p>
+                        </div>
+                    </label>
+                </div>
+        
+                <div class="card">
+                    <input type="checkbox" id="card4" class="card-toggle">
+                    <label for="card4" class="card-inner">
+                        <img src="img4.png" alt="Абстракционизм" class="card-img">
+                        <div class="card-text">
+                            <p>Абстракционизм. Главная особенность — отказ от правильности форм и действительности, показ сюжета посредством различных форм и ярких оттенков.</p>
+                        </div>
+                    </label>
+                </div>
+        
+                <div class="card">
+                    <input type="checkbox" id="card5" class="card-toggle">
+                    <label for="card5" class="card-inner">
+                        <img src="img5.png" alt="Поп-арт" class="card-img">
+                        <div class="card-text">
+                            <p>Поп-арт. Направление предполагает демонстрацию объектов массовой культуры, направлено на развлечение или коммерцию.</p>
+                        </div>
+                    </label>
+                </div>
+        
+                <div class="card">
+                    <input type="checkbox" id="card6" class="card-toggle">
+                    <label for="card6" class="card-inner">
+                        <img src="img6.png" alt="Минимализм" class="card-img">
+                        <div class="card-text">
+                            <p>Минимализм. Для этого направления характерны простота и единообразие форм.</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+        <section id="quiz"  class="full-width">
+            <h2>Проверьте свои знания!</h2>
+            <div class="content-container">
+                <div id="quiz-container">
+                    <div class="question" id="question-1">
+                        <img src="img5.png" alt="Вопрос изображения" id="quiz-image">
+                        <div class="options">
+                            <button class="option-btn" onclick="checkAnswer('Экспрессионизм')">Экспрессионизм</button>
+                            <button class="option-btn" onclick="checkAnswer('Минимализм')">Минимализм</button>
+                            <button class="option-btn" onclick="checkAnswer('Поп-арт')">Поп-арт</button>
+                            <button class="option-btn" onclick="checkAnswer('Абстракционизм')">Абстракционизм</button>
+                        </div>
+                    </div>
+                    <div class="question" id="question-2">
+                        <img src="img1.png" alt="Вопрос изображения" id="quiz-image">
+                        <div class="options">
+                            <button class="option-btn" onclick="checkAnswer('Реализм')">Реализм</button>
+                            <button class="option-btn" onclick="checkAnswer('Поп-арт')">Поп-арт</button>
+                            <button class="option-btn" onclick="checkAnswer('Экспрессионизм')">Экспрессионизм</button>
+                            <button class="option-btn" onclick="checkAnswer('Неоклассицизм')">Неоклассицизм</button>
+                        </div>
+                    </div>
+                    <div class="question" id="question-3">
+                        <img src="img3.png" alt="Вопрос изображения" id="quiz-image">
+                        <div class="options">
+                            <button class="option-btn" onclick="checkAnswer('Экспрессионизм')">Экспрессионизм</button>
+                            <button class="option-btn" onclick="checkAnswer('Реализм')">Реализм</button>
+                            <button class="option-btn" onclick="checkAnswer('Неоклассицизм')">Неоклассицизм</button>
+                            <button class="option-btn" onclick="checkAnswer('Абстракционизм')">Абстракционизм</button>
+                        </div>
+                    </div>
+                    <div class="question" id="question-4">
+                        <img src="img2.png" alt="Вопрос изображения" id="quiz-image">
+                        <div class="options">
+                            <button class="option-btn" onclick="checkAnswer('Неоклассицизм')">Неоклассицизм</button>
+                            <button class="option-btn" onclick="checkAnswer('Абстракционизм')">Абстракционизм</button>
+                            <button class="option-btn" onclick="checkAnswer('Экспрессионизм')">Экспрессионизм</button>
+                            <button class="option-btn" onclick="checkAnswer('Реализм')">Реализм</button>
+                        </div>
+                    </div>
+                    <div id="result" style="display: none;">
+                        <h3>Результат</h3>
+                        <p id="result-text"></p>
+                        <button onclick="restartQuiz()">Пройти снова</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <div class="social-buttons">
+            <div class="social-button">
+                <img src="vk2.png" alt="VK">
+            </div>
+            <div class="social-button">
+                <img src="tg2.png" alt="Telegram">
+            </div>
+        </div>
+        <address>
+            <h2 id="contact">Контакты</h2>
+            Разработчик сайта: Софья Забелло <br>
+            Телефон: <a href="+79251886920">+79251886920</a>
+            Email: <a href="zabello.s.a@edu.mirea.ru">zabello.s.a@edu.mirea.ru</a>
+        </address>
+    </footer>
+</body>
+<script src="script.js" defer></script>
+</html>

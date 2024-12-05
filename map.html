@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивная карта</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключение стилей Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <img src="logo2.png" alt="Логотип сайта" id="logo">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="mobile-menu">
+            <label for="menu-toggle" class="close-icon">&times;</label>
+            <ul>
+                <li><a href="shop.html">Купить курсы</a></li>
+                <li><a href="exhibitions.html">Посетить выставки</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="cards.html">Направления</a></li>
+                <li><a href="map.html">Галереи и музеи</a></li>
+            </ul>
+        </nav>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="shop.html">Курсы</a></li>
+                <li><a href="exhibitions.html">Выставки</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="cards.html">Направления</a></li>
+                <li><a href="map.html">Галереи и музеи</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="mapsite">
+            <section id="map-section">
+                <h2>Картинные галереи всего мира</h2>
+                <div id="map"></div>
+            </section>
+            <section id="museums-info">
+                <h2>Информация о музеях</h2>
+                <div class="museum-section" id="museum-louvre">
+                    <img src="map1.jpg" alt="Лувр">
+                    <div>
+                        <h3>Лувр</h3>
+                        <p>Лувр — крупнейший художественный музей и исторический памятник в Париже, Франция. Здесь хранятся такие произведения, как «Мона Лиза» Леонардо да Винчи и статуя Венеры Милосской.</p>
+                        <p><b>Расположение:</b> Париж, Франция</p>
+                    </div>
+                </div>
+                <div class="museum-section" id="museum-national-gallery">
+                    <img src="map2.jpg" alt="Национальная галерея">
+                    <div>
+                        <h3>Национальная галерея</h3>
+                        <p>Национальная галерея в Лондоне содержит одну из самых полных коллекций европейского искусства от XIII до XIX веков. Здесь можно увидеть работы Ван Гога, Рембрандта и других мастеров.</p>
+                        <p><b>Расположение:</b> Лондон, Великобритания</p>
+                    </div>
+                </div>
+                <div class="museum-section" id="museum-hermitage">
+                    <img src="map3.jpg" alt="Эрмитаж">
+                    <div>
+                        <h3>Эрмитаж</h3>
+                        <p>Эрмитаж — один из крупнейших и старейших художественных музеев мира, расположенный в Санкт-Петербурге. Коллекция включает более 3 миллионов произведений искусства и культурных памятников.</p>
+                        <p><b>Расположение:</b> Санкт-Петербург, Россия</p>
+                    </div>
+                </div>
+                <div class="museum-section" id="museum-metropolitan">
+                    <img src="map4.jpg" alt="Метрополитен">
+                    <div>
+                        <h3>Метрополитен-музей</h3>
+                        <p>Метрополитен-музей в Нью-Йорке — крупнейший художественный музей США, где представлены экспонаты из всех уголков мира, включая древние артефакты и современные шедевры.</p>
+                        <p><b>Расположение:</b> Нью-Йорк, США</p>
+                    </div>
+                </div>
+                <div class="museum-section" id="museum-dresden">
+                    <img src="map5.jpg" alt="Дрезденская галерея">
+                    <div>
+                        <h3>Дрезденская картинная галерея</h3>
+                        <p>Дрезденская галерея в Германии известна своими шедеврами эпохи Возрождения и барокко, включая работы Рафаэля и Рубенса.</p>
+                        <p><b>Расположение:</b> Дрезден, Германия</p>
+                    </div>
+                </div>
+                <div class="museum-section" id="museum-prado">
+                    <img src="map6.jpg" alt="Прадо">
+                    <div>
+                        <h3>Музей Прадо</h3>
+                        <p>Музей Прадо в Мадриде содержит коллекции испанской живописи, включая работы Веласкеса, Гойи и Эль Греко.</p>
+                        <p><b>Расположение:</b> Мадрид, Испания</p>
+                    </div>
+                </div>
+                <div class="museum-section" id="museum-rijksmuseum">
+                    <img src="map7.png" alt="Рейксмузеум">
+                    <div>
+                        <h3>Рейксмузеум</h3>
+                        <p>Рейксмузеум в Амстердаме хранит коллекцию шедевров голландского искусства, включая работы Рембрандта и Вермеера.</p>
+                        <p><b>Расположение:</b> Амстердам, Нидерланды</p>
+                    </div>
+                </div>
+                <div class="museum-section" id="museum-china">
+                    <img src="map8.jpg" alt="Национальный музей Китая">
+                    <div>
+                        <h3>Национальный музей Китая</h3>
+                        <p>Национальный музей Китая в Пекине демонстрирует богатую историю и культуру Китая, охватывающую тысячелетия.</p>
+                        <p><b>Расположение:</b> Пекин, Китай</p>
+                    </div>
+                </div>
+                <div class="museum-section" id="museum-vatican">
+                    <img src="map9.jpg" alt="Музеи Ватикана">
+                    <div>
+                        <h3>Музеи Ватикана</h3>
+                        <p>Музеи Ватикана известны своими потрясающими коллекциями искусства, включая Сикстинскую капеллу.</p>
+                        <p><b>Расположение:</b> Ватикан</p>
+                    </div>
+                </div>
+                <div class="museum-section" id="museum-tokyo">
+                    <img src="map10.jpg" alt="Токийский национальный музей">
+                    <div>
+                        <h3>Токийский национальный музей</h3>
+                        <p>Токийский национальный музей представляет богатую коллекцию японского искусства и культурных артефактов.</p>
+                        <p><b>Расположение:</b> Токио, Япония</p>
+                    </div>
+                </div>
+                <div class="museum-section" id="museum-royal-ontario">
+                    <img src="map11.jpg" alt="Королевский музей Онтарио">
+                    <div>
+                        <h3>Королевский музей Онтарио</h3>
+                        <p>Королевский музей Онтарио в Торонто предлагает уникальные экспонаты, посвященные истории, искусству и культуре.</p>
+                        <p><b>Расположение:</b> Торонто, Канада</p>
+                    </div>
+                </div>
+                <div class="museum-section" id="museum-tretyakovka">
+                    <img src="map12.jpg" alt="Третьяковка">
+                    <div>
+                        <h3>Государственная Третьяковская галерея</h3>
+                        <p>Галерея созданная на основе исторических коллекций купцов братьев Павла и Сергея Михайловичей Третьяковых; одно из крупнейших в мире собраний русского изобразительного искусства.</p>
+                        <p><b>Расположение:</b> Москва, Россия</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="social-buttons">
+            <div class="social-button">
+                <img src="vk2.png" alt="VK">
+            </div>
+            <div class="social-button">
+                <img src="tg2.png" alt="Telegram">
+            </div>
+        </div>
+        <address>
+            <h2 id="contact">Контакты</h2>
+            Разработчик сайта: Софья Забелло <br>
+            Телефон: <a href="+79251886920">+79251886920</a>
+            Email: <a href="zabello.s.a@edu.mirea.ru">zabello.s.a@edu.mirea.ru</a>
+        </address>
+    </footer>
+</body>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js" defer></script>
+</html>

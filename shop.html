@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин курсов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo2.png" alt="Логотип сайта" id="logo">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="mobile-menu">
+            <label for="menu-toggle" class="close-icon">&times;</label>
+            <ul>
+                <li><a href="shop.html">Купить курсы</a></li>
+                <li><a href="exhibitions.html">Посетить выставки</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="cards.html">Направления</a></li>
+                <li><a href="map.html">Галереи и музеи</a></li>
+            </ul>
+        </nav>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="shop.html">Курсы</a></li>
+                <li><a href="exhibitions.html">Выставки</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="cards.html">Направления</a></li>
+                <li><a href="map.html">Галереи и музеи</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="shop-section">
+            <h2>Купить курсы</h2>
+            <p>Добро пожаловать в раздел "Купить курсы"! Здесь вы можете найти все курсы, которые вы хотели бы приобрести.</p>
+            <div id="shop">
+                <div class="course-card">
+                    <img src="course1.jpg" alt="Изобразительное искусство" class="course-image">
+                    <h3>Курс 1: Изобразительное искусство</h3>
+                    <p class="description">Этот курс предназначен для тех, кто хочет изучить основы изобразительного искусства и развить свои творческие способности. Вы познакомитесь с различными художественными материалами и техниками, научитесь создавать композиции и работать с цветом. Опытные преподаватели помогут вам раскрыть свой потенциал и найти свой уникальный стиль.</p>
+                    <p class="price">Цена: 1500 руб.</p>
+                    <button class="buy-button">Купить</button>
+                </div>
+                <div class="course-card">
+                    <img src="course2.jpg" alt="История искусства" class="course-image">
+                    <h3>Курс 2: История искусства</h3>
+                    <p class="description">На этом курсе вы погрузитесь в увлекательный мир истории искусства. Вы узнаете о развитии художественных стилей и направлений, изучите шедевры мировой живописи, скульптуры и архитектуры. Вы научитесь анализировать произведения искусства и понимать их контекст. Этот курс поможет вам расширить свой кругозор и глубже понять искусство.</p>
+                    <p class="price">Цена: 2000 руб.</p>
+                    <button class="buy-button">Купить</button>
+                </div>
+                <div class="course-card">
+                    <img src="course3.jpg" alt="Современное искусство" class="course-image">
+                    <h3>Курс 3: Современное искусство</h3>
+                    <p class="description">Современное искусство — это постоянно развивающаяся и меняющаяся сфера, которая требует от художников смелости и новаторства. На этом курсе вы познакомитесь с современными тенденциями в искусстве, изучите работы современных художников и узнаете о новых технологиях и материалах, которые они используют. Вы также научитесь анализировать и интерпретировать современное искусство.</p>
+                    <p class="price">Цена: 1500 руб.</p>
+                    <button class="buy-button">Купить</button>
+                </div>
+                <div class="course-card">
+                    <img src="course4.jpg" alt="Основы дизайна" class="course-image">
+                    <h3>Курс 4: Основы дизайна</h3>
+                    <p class="description">Дизайн — это область, которая объединяет искусство, технологии и функциональность. На этом курсе вы узнаете о принципах дизайна, изучите основы композиции, цвета, типографии и верстки. Вы также познакомитесь с различными видами дизайна, такими как графический, веб-дизайн, дизайн интерьера и промышленный дизайн. Этот курс поможет вам развить свои дизайнерские навыки и создать свой первый проект.</p>
+                    <p class="price">Цена: 3500 руб.</p>
+                    <button class="buy-button">Купить</button>
+                </div>
+            </div>
+            <div id="cart">
+                <h2>Корзина</h2>
+                <div id="filter-sort">
+                    <h3>Фильтр и сортировка</h3>
+                    <label for="min-price">Минимальная цена:</label>
+                    <input type="number" id="min-price" name="min-price">
+                    <label for="max-price">Максимальная цена:</label>
+                    <input type="number" id="max-price" name="max-price">
+                    <button id="filter-button">Фильтровать</button>
+                    <button id="sort-asc">Сортировать по возрастанию</button>
+                    <button id="sort-desc">Сортировать по убыванию</button>
+                </div>
+                <ul id="cart-items">
+                    <!-- Список покупок будет добавляться динамически -->
+                </ul>
+                <p>Итоговая сумма: <span id="total-value">0</span> руб.</p>
+                <button id="clear-cart">Очистить корзину</button>
+                <button id="checkout">Завершить покупки</button>
+                <button id="remove-item">Удалить элемент</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-buttons">
+            <div class="social-button">
+                <img src="vk2.png" alt="VK">
+            </div>
+            <div class="social-button">
+                <img src="tg2.png" alt="Telegram">
+            </div>
+        </div>
+        <address>
+            <h2 id="contact">Контакты</h2>
+            Разработчик сайта: Софья Забелло <br>
+            Телефон: <a href="+79251886920">+79251886920</a>
+            Email: <a href="zabello.s.a@edu.mirea.ru">zabello.s.a@edu.mirea.ru</a>
+        </address>
+    </footer>
+</body>
+<script src="script.js" defer></script>
+</html>
